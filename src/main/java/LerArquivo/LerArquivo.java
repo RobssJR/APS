@@ -28,7 +28,7 @@ public class LerArquivo {
         System.out.printf("]\n");
     }
     
-    public static void read(String path){
+    public static int[] read(String path){
         List<Integer> numeros = new ArrayList<>();
         int array[];
         try{
@@ -42,8 +42,9 @@ public class LerArquivo {
             }
             array = numeros.stream().mapToInt(i -> i).toArray();
             LerArquivo.printArray(array, 0, array.length);
+            return array;
         }catch(FileNotFoundException e){
-            System.out.println("Exceção: " + e);
+            return null;
         }
     }
     
