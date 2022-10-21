@@ -41,7 +41,6 @@ public class LerArquivo {
                 numeros.add(Integer.valueOf(linha_arquivo));
             }
             array = numeros.stream().mapToInt(i -> i).toArray();
-            LerArquivo.printArray(array, 0, array.length);
             return array;
         }catch(FileNotFoundException e){
             return null;

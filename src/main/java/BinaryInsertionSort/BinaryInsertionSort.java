@@ -29,12 +29,11 @@ public class BinaryInsertionSort {
                 }
                 v[j] = escolhido;
             }
-
-            printArray(v, 0, v.length);
         }
+        //printArray(v, 0, v.length);
     }
 
-    private static int buscabinaria(int v[], int elem, int inicio, int fim){
+    private static int buscabinaria(int v[], int elem, int inicio, int fim) {
         int meio = 0;
 
         while(inicio <= fim){
@@ -48,7 +47,6 @@ public class BinaryInsertionSort {
                 break;
             }
         }
-
         return meio;
     }
 }
