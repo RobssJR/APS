@@ -1,19 +1,6 @@
 package BinaryInsertionSort;
 
 public class BinaryInsertionSort {
-    public static void printArray(int v[], int inicio, int fim){
-        if(fim != v.length)
-            fim += 1;
-
-        if(v.length > 0)
-            System.out.printf("[%d", v[inicio]);
-        else
-            System.out.printf("[");
-
-        for(int i = inicio + 1; i < fim; i++)
-            System.out.printf(", %d",v[i]);
-        System.out.printf("]\n");
-    }
     public static void BinaryInsertionSort(int v[]){
         int i, local, j, escolhido;
 
@@ -30,7 +17,6 @@ public class BinaryInsertionSort {
                 v[j] = escolhido;
             }
         }
-        //printArray(v, 0, v.length);
     }
 
     private static int buscabinaria(int v[], int elem, int inicio, int fim) {
